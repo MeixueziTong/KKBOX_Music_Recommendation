@@ -82,9 +82,9 @@ params = {
          'metric' : 'auc'
          }
  
-model_f2 = lgb.train(params, train_set=d_train_final,
-                            valid_sets=watchlist_final, 
-                            verbose_eval=20)
+model_f2 = lgb.train(params, train_set=lgb_train,
+                            valid_sets=lgb_val, 
+                            verbose_eval=10)
  
 print('Making predictions...')
 p_test_1 = model_f1.predict(X_test)
